@@ -3,32 +3,15 @@ var express = require("express");
 var path = require('path')
 var app = express();
 
-// Error: ENOENT: no such file or directory, stat '/Users/jessicalatorre/Projects-A/p2g6/routes../public/homepage.html'
+//viewed at localhost: 8080
+module.exports = function (app) {
 
-    //viewed at localhost: 8080
-    module.exports = function(app) {
+  app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/homepage.html"));
+  })
 
-        // Each of the below routes just handles the HTML page that the user gets sent to.
-      
-        // index route loads view.html
-        app.get("/", function(req, res) {
-          res.sendFile(path.join(__dirname, "../public/homepage.html"));
-        });
-      
-        // // cms route loads cms.html
-        // app.get("/cms", function(req, res) {
-        //   res.sendFile(path.join(__dirname, "../public/cms.html"));
-        // });
-      
-        // // blog route loads blog.html
-        // app.get("/blog", function(req, res) {
-        //   res.sendFile(path.join(__dirname, "../public/blog.html"));
-        // });
-      
-        // // authors route loads author-manager.html
-        // app.get("/authors", function(req, res) {
-        //   res.sendFile(path.join(__dirname, "../public/author-manager.html"));
-        // });
-      
-      };
-      
+  app.get("/game", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/game.html"));
+  })
+};
+
