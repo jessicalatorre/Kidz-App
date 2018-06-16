@@ -43,13 +43,15 @@ require("./routes/API_Routes.js")(app);
 require("./routes/passport-routes")(app,passport);
 
 
-//Below is the test to ensure all the models are imported correctly via the server.js file
 
+
+//Below is the test to ensure all the models are imported correctly via the server.js file
+ 
 //Sync Database
 db.sequelize.sync().then(function() {
-
-   console.log('HUZZAH! Database looks fine')
-
+ 
+    console.log('HUZZAH! Database looks fine')
+ 
 }).catch(function(err) {
 
    console.log(err, "Something went wrong with the Database Update!")
