@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "",
-    "database": "kidz_app",
-    "host": "127.0.0.1",
+    "username": "afk1hulayh262me2",
+    "password": "u3h5rn2bryr20lxe",
+    "database": "khx64erzfik3jbi5",
+    "host": "g3v9lgqa8h5nq05o.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
