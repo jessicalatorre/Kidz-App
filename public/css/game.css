@@ -1,0 +1,26 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+#levels{
+    height: 100%
+}
+
+#game-parent{
+    height: 100%
+}
+
+
+#game-body {
+    display: flex;
+    margin-top: 15%;
+}
+
+.object-card {
+    width: 25%;
+    margin: 1rem;
+}
