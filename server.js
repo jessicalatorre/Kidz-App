@@ -30,12 +30,24 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 // Routes
-// Requiring essentially requires the routes
-//=============================================================
 require("./routes/html-routes.js")(app);
-// require("./routes/kids-game.js")(app);
-// require("./routes/API-Routes.js")(app);
-// require("./routes/parent-mode.js")(app);
+require("./routes/API_Routes.js")(app);
+
+//Below is the test to ensure all the models are imported correctly via the server.js file
+
+//Models
+var models = require("./models");
+ 
+//Sync Database
+models.sequelize.sync().then(function() {
+ 
+    console.log('HUZZAH! Database looks fine')
+ 
+}).catch(function(err) {
+ 
+    console.log(err, "Something went wrong with the Database Update!")
+ 
+});
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
