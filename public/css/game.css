@@ -6,6 +6,10 @@ body {
     height: 100%;
 }
 
+#levels{
+    height: 100%
+}
+
 #game-parent{
     height: 100%
 }
