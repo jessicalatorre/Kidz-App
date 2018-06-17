@@ -13,5 +13,9 @@ module.exports = function (app) {
   app.get("/game", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/game.html"));
   })
+
+  app.get("/parent-view", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/parent-view.html"));
+  })
 };
 
