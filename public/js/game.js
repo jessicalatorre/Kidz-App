@@ -147,11 +147,32 @@ var checkClick = (selectedObject, correctAnswer) => {
     console.log('selected object:', selectedObject);
     if (correctAnswer === selectedObject) {
         console.log("YAYAYAYAYAYAY");
+        // console.log('user?', req.user);
         var correctAnswer = givePrompt(selectedLevel);
+        var data = {
+            userID: 1,
+            objectName: selectedObject,
+            isCorrect: 1
+        }
+        $.post("/api/sessions", data,
+            function (data, textStatus, jqXHR) {
+                console.log("success with:", data);
+            }
+        );
         $('#game-body').html('');
         showChoices(selectedLevel, correctAnswer);
 
     } else {
+        var data = {
+            userID: 1,
+            objectName: selectedObject,
+            isCorrect: 0
+        }
+        $.post("/api/sessions", data,
+            function (data, textStatus, jqXHR) {
+                console.log("success with:", data);
+            }
+        );
         console.log("TRY AGAIN!!!!!");
     }
 }
