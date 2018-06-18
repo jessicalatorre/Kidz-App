@@ -32,6 +32,7 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 require('./config/passport/passport.js')(passport, db.user);
 
+ 
 // Static directory
 // app.use(express.static("public"));
 //best practice keep all assets on server page
