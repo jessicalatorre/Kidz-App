@@ -39,24 +39,39 @@ levels = [{
 }, {
     name: 'shapes',
     image: "https://loremflickr.com/180/100",
-    promptText: "",
-    promptAudio: "",
+    prompts: [{
+        name: "square",
+        text: "FIND THE SQUARE",
+        audio: ""
+    }, {
+        name: "triangle",
+        text: "FIND THE TRIANGLE",
+        audio: ""
+    }, {
+        name: "circle",
+        text: "FIND THE CIRCLE",
+        audio: ""
+    }, {
+        name: "star",
+        text: "FIND THE STAR",
+        audio: ""
+    }],
     choices: [{
         name: "square",
-        image: "https://loremflickr.com/180/100",
+        image: "./images/shapes/square.png",
         sound: "",
 
     }, {
         name: "triangle",
-        image: "https://loremflickr.com/180/100",
+        image: "./images/shapes/triangle.png",
         sound: "",
     }, {
         name: "circle",
-        image: "https://loremflickr.com/180/100",
+        image: "./images/shapes/circle.png",
         sound: "",
     }, {
         name: "star",
-        image: "https://loremflickr.com/180/100",
+        image: "./images/shapes/star.png",
         sound: "",
     }]
 }]
@@ -67,12 +82,10 @@ var showLevels = () => {
         if (levels.hasOwnProperty(key)) {
             const element = levels[key];
             console.log('element:', element);
-            var levelDiv = $('<div class="level-option">')
-            var newImg = $('<img>')
-            $('#levels').append(levelDiv);
-            $(levelDiv).attr('value', element.name);
-            $(newImg).attr('src', element.image)
-            $(levelDiv).append(newImg)
+            var levelBttn = $('<button type="button" class="btn btn-outline-primary level-option">')
+            $('#levels').append(levelBttn);
+            $(levelBttn).attr('value', element.name);
+            $(levelBttn).text(element.name)
         }
     }
 }
@@ -104,7 +117,6 @@ var givePrompt = (selectedLevel) => {
                 var prompt = element.prompts[randomInt]
                 promptDiv = $('#prompt')
                 $(promptDiv).text(prompt.text);
-                // $('#game').append(promptDiv);
                 return prompt.name
             }
         }
@@ -147,7 +159,6 @@ var checkClick = (selectedObject, correctAnswer) => {
     console.log('selected object:', selectedObject);
     if (correctAnswer === selectedObject) {
         console.log("YAYAYAYAYAYAY");
-        // console.log('user?', req.user);
         var correctAnswer = givePrompt(selectedLevel);
         var data = {
             userID: 1,
