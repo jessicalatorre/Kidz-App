@@ -10,30 +10,30 @@ levels = [{
         text: "FIND THE HORSE",
         audio: ""
     }, {
-        name: "cat",
-        text: "FIND THE CAT",
+        name: "chicken",
+        text: "FIND THE CHICKEN",
         audio: ""
     }, {
-        name: "dog",
-        text: "FIND THE DOG",
+        name: "duck",
+        text: "FIND THE DUCK",
         audio: ""
     }],
     choices: [{
         name: "cow",
-        image: "https://loremflickr.com/180/100",
+        image: "./images/cow.png",
         sound: "",
 
     }, {
         name: "horse",
-        image: "https://loremflickr.com/180/100",
+        image: "./images/horse.png",
         sound: "",
     }, {
-        name: "cat",
-        image: "https://loremflickr.com/180/100",
+        name: "chicken",
+        image: "./images/chicken.png",
         sound: "",
     }, {
-        name: "dog",
-        image: "https://loremflickr.com/180/100",
+        name: "duck",
+        image: "./images/duck.png",
         sound: "",
     }]
 }, {
