@@ -6,13 +6,19 @@ body {
     height: 100%;
 }
 
-#levels{
+.farm-background{
+background: url('http://4.bp.blogspot.com/-azFEhRvExUw/UFj2SKyoGlI/AAAAAAAABrs/-5XTma5shis/s1600/ELMO_FARM_2_MAIN_PAINT.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#levels {
     height: 100%;
     display: block;
     text-align: center;
 }
 
-.level-option{
+.level-option {
     margin: 1rem;
     padding: 1rem;
     border: .25 solid white;
@@ -20,10 +26,9 @@ body {
     background-color: white;
 }
 
-#game-parent{
+#game-parent {
     height: 100%
 }
-
 
 #game-body {
     display: flex;
