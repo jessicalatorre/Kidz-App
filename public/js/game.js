@@ -4,36 +4,36 @@ levels = [{
     prompts: [{
         name: "cow",
         text: "FIND THE COW",
-        audio: ""
+        audio: "./audio/barn-animals/cow.m4a"
     }, {
         name: "horse",
         text: "FIND THE HORSE",
-        audio: ""
+        audio: "./audio/barn-animals/horse.m4a"
     }, {
         name: "chicken",
         text: "FIND THE CHICKEN",
-        audio: ""
+        audio: "./audio/barn-animals/chicken.m4a"
     }, {
         name: "goat",
         text: "FIND THE GOAT",
-        audio: ""
+        audio: "./audio/barn-animals/goat.m4a"
     }],
     choices: [{
         name: "cow",
-        image: "./images/cow.png",
+        image: "./images/barn-animals/cow.png",
         sound: "",
 
     }, {
         name: "horse",
-        image: "./images/horse.png",
+        image: "./images/barn-animals/horse.png",
         sound: "",
     }, {
         name: "chicken",
-        image: "./images/chicken.png",
+        image: "./images/barn-animals/chicken.png",
         sound: "",
     }, {
         name: "goat",
-        image: "./images/goat.png",
+        image: "./images/barn-animals/goat.png",
         sound: "",
     }]
 }, {
@@ -117,6 +117,11 @@ var givePrompt = (selectedLevel) => {
                 var prompt = element.prompts[randomInt]
                 promptDiv = $('#prompt')
                 $(promptDiv).text(prompt.text);
+                var promptAudio = new Audio(prompt.audio);
+        setTimeout(() => {
+            promptAudio.play();
+        }, 1500);
+                
                 return prompt.name
             }
         }
@@ -159,6 +164,8 @@ var checkClick = (selectedObject, correctAnswer) => {
     console.log('selected object:', selectedObject);
     if (correctAnswer === selectedObject) {
         console.log("YAYAYAYAYAYAY");
+        var goodJob = new Audio('./audio/goodJob.m4a');
+        goodJob.play();
         var correctAnswer = givePrompt(selectedLevel);
         var data = {
             userID: 1,
@@ -179,11 +186,14 @@ var checkClick = (selectedObject, correctAnswer) => {
             objectName: selectedObject,
             isCorrect: 0
         }
+        console.log("TRY AGAIN!!!!!");
+        var tryAgain = new Audio('./audio/tryAgain.m4a');
+        tryAgain.play();
+        // ./audio/barn-animals/horse.png
         $.post("/api/sessions", data,
             function (data, textStatus, jqXHR) {
                 console.log("success with:", data);
             }
         );
-        console.log("TRY AGAIN!!!!!");
     }
 }
