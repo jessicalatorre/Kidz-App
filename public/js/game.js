@@ -118,11 +118,11 @@ var givePrompt = (selectedLevel) => {
                 promptDiv = $('#prompt')
                 $(promptDiv).text(prompt.text);
                 var promptAudio = new Audio(prompt.audio);
-        setTimeout(() => {
-            $('img').removeClass('correct-click');
-            promptAudio.play();
-        }, 1500);
-                
+                setTimeout(() => {
+                    $('img').removeClass('correct-click');
+                    promptAudio.play();
+                }, 1500);
+
                 return prompt.name
             }
         }
@@ -165,11 +165,11 @@ var checkClick = (selectedObject, correctAnswer) => {
     console.log('selected object:', selectedObject);
     if (correctAnswer === selectedObject) {
         console.log('selectedObject:', selectedObject);
-        console.log('selectedObject2:', $('#'+selectedObject+'-img'));
+        console.log('selectedObject2:', $('#' + selectedObject + '-img'));
         setTimeout(() => {
-            $('#'+selectedObject+'-img').addClass('correct-click');
+            $('#' + selectedObject + '-img').addClass('correct-click');
         }, 250);
-        
+
         console.log("YAYAYAYAYAYAY");
         var goodJob = new Audio('./audio/goodJob.m4a');
         goodJob.play();
@@ -195,7 +195,7 @@ var checkClick = (selectedObject, correctAnswer) => {
         }
         console.log("TRY AGAIN!!!!!");
         setTimeout(() => {
-            $('#'+selectedObject+'-img').addClass('incorrect-click');
+            $('#' + selectedObject + '-img').addClass('incorrect-click');
         }, 250);
         var tryAgain = new Audio('./audio/tryAgain.m4a');
         tryAgain.play();
