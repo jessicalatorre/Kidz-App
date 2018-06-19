@@ -106,7 +106,7 @@ $(document).ready(function () {
 					yAxes: [{
 						ticks: {
 							min: 0,
-							stepSize: 1
+							stepSize: 10
 						}
 					}]
 				}

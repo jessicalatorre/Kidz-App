@@ -1,24 +1,30 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-  <title></title>
-</head>
-<body>
-<form id="signup" name="signup" method="post" action="/signup">
-  <label for="email">Email Address</label>
-  <input class="text" name="email" type="email" />
-  <label for="firstname">Firstname</label>
-  <input name="firstname" type="text" />
-  <label for="lastname">Lastname</label>
-  <input name="lastname" type="text" />
-  <label for="password">Password</label>
-  <input name="password" type="password" />
-  <input class="btn" type="submit" value="Sign Up" />
-</form>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
-	 <script src="/routes/passport-routes.js"></script>
+<head>
+  <title>Sign Up</title>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"> -->
+
+  <link rel="stylesheet" href="./css/game.css">
+</head>
+
+<body class="farm-background">
+  <form id="signup" name="signup" method="post" action="/signup">
+    <label for="email">Email Address</label>
+    <input class="text" name="email" type="email" />
+    <label for="firstname">First Name</label>
+    <input name="firstname" type="text" />
+    <label for="lastname">Last Name</label>
+    <input name="lastname" type="text" />
+    <label for="password">Password</label>
+    <input name="password" type="password" />
+    <input class="btn" type="submit" value="Sign Up" />
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+  <script src="/routes/passport-routes.js"></script>
 </body>
+
 </html>
