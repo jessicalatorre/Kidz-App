@@ -6,14 +6,36 @@ body {
     height: 100%;
 }
 
-#levels{
-    height: 100%
+.farm-background {
+    background: url('../images/ELMO_FARM_2_MAIN_PAINT.jpg') !important;
+    background-size: cover  !important;
+    background-repeat: no-repeat  !important;
 }
 
+.object-card{
+    background: none !important
+}
 #game-parent{
-    height: 100%
+    background: none !important
 }
 
+#levels {
+    height: 100%;
+    display: block;
+    text-align: center;
+}
+
+.level-option {
+    margin: 1rem;
+    padding: 1rem;
+    border: .25 solid white;
+    color: #1e1f1e;
+    background-color: white;
+}
+
+#game-parent {
+    height: 100%
+}
 
 #game-body {
     display: flex;
@@ -24,3 +46,113 @@ body {
     width: 25%;
     margin: 1rem;
 }
+
+#signin-id {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left:5%;
+    margin-bottom:2%;
+}
+
+h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    margin:5%;
+    margin-bottom: 2%;
+    color: white;
+    text-shadow: 2px 3px 5px #1e1f1e;
+}
+
+
+h4 {
+    font-family: 'Gloria Hallelujah', cursive;  
+    color: white;
+    text-shadow: 2px 3px 5px #1e1f1e;
+}
+
+label {
+    font-family: 'Gloria Hallelujah', cursive; 
+    text-shadow: 2px 3px 4px white;
+    font-size: 25px; 
+    color: #2b2c2b;
+}
+
+/* #sign-in-btn */
+
+.btn {
+    margin-left:1%;
+    margin-top: 1.5%;
+    /* margin-bottom: 1%; */
+    /* height: 5px; */
+    padding:5px;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 1px grey;
+    border: none;
+}
+
+
+
+.btn:hover {
+    background: rgba(36, 36, 125, 0.434);
+}
+
+#sign-up-btn {
+    margin-left:6%;
+    margin-bottom: 1%;
+    /* height: 5px; */
+    padding:5px;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 1px grey;
+    border: none;
+}
+
+.text {
+    border-radius: 10px; 
+    margin-top:1px;
+}
+
+#inputdefault {
+    border-radius: 10px; 
+}
+
+/* #signup {
+   position:relative;
+   top: 5%;
+} */
+
+.text-center {
+    position:relative;
+    top: 5%;
+}
+
+.bg-primary {
+    background-color: lightskyblue;
+}
+
+a {
+    color:#1e1f1e;
+    border:none;
+    border-radius: 10px;
+}
+
+#login {
+    color:#1e1f1e;
+    border:none;
+    border-radius: 10px;
+}
+
+
+.correct-click {
+    -webkit-filter: drop-shadow(10px 10px 10px green)
+                    drop-shadow(0px 10px 10px green);
+    filter: drop-shadow(0px 10px 10px green) 
+            drop-shadow(-1px -1px 0 green);
+  }
+
+  .incorrect-click {
+    -webkit-filter: drop-shadow(10px 10px 10px red)
+                    drop-shadow(0px 10px 10px red);
+    filter: drop-shadow(0px 10px 10px red) 
+            drop-shadow(-1px -1px 0 red);
+  }

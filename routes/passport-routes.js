@@ -13,14 +13,14 @@ module.exports = function (app, passport) {
   });
 
   app.post('/signup', passport.authenticate('local-signup', {
-    successRedirect: '/dashboard',
+    successRedirect: '/game',
     failureRedirect: '/signup'
   }
   ));
 
-  app.get("/dashboard", isLoggedIn, function (req, res) {
+  app.get("/game", isLoggedIn, function (req, res) {
     console.log(req.user);
-    res.sendFile(path.join(__dirname, "../public/dashboard.html"));
+    res.sendFile(path.join(__dirname, "../public/game.html"));
   });
 
   app.get("/logout", function (req, res) {
@@ -30,7 +30,7 @@ module.exports = function (app, passport) {
   });
 
   app.post('/signin', passport.authenticate('local-signin', {
-    successRedirect: '/dashboard',
+    successRedirect: '/game',
     failureRedirect: '/signin'
   }
   ));
