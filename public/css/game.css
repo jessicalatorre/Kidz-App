@@ -6,8 +6,8 @@ body {
     height: 100%;
 }
 
-.farm-background{
-background: url('http://4.bp.blogspot.com/-azFEhRvExUw/UFj2SKyoGlI/AAAAAAAABrs/-5XTma5shis/s1600/ELMO_FARM_2_MAIN_PAINT.jpg');
+.farm-background {
+    background: url('../images/ELMO_FARM_2_MAIN_PAINT.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
