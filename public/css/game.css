@@ -7,9 +7,16 @@ body {
 }
 
 .farm-background {
-    background: url('../images/ELMO_FARM_2_MAIN_PAINT.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url('../images/ELMO_FARM_2_MAIN_PAINT.jpg') !important;
+    background-size: cover  !important;
+    background-repeat: no-repeat  !important;
+}
+
+.object-card{
+    background: none !important
+}
+#game-parent{
+    background: none !important
 }
 
 #levels {
@@ -51,3 +58,17 @@ h1 {
 #signup {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.correct-click {
+    -webkit-filter: drop-shadow(10px 10px 10px green)
+                    drop-shadow(0px 10px 10px green);
+    filter: drop-shadow(0px 10px 10px green) 
+            drop-shadow(-1px -1px 0 green);
+  }
+
+  .incorrect-click {
+    -webkit-filter: drop-shadow(10px 10px 10px red)
+                    drop-shadow(0px 10px 10px red);
+    filter: drop-shadow(0px 10px 10px red) 
+            drop-shadow(-1px -1px 0 red);
+  }
