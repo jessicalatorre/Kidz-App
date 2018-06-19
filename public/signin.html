@@ -5,27 +5,47 @@
   <title>Sign In</title>
 
   <!-- Bootstrap CSS -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous"> -->
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <!-- Google Fonts  -->
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Poor+Story" rel="stylesheet">
+  <!--Linked CSS -->
   <link rel="stylesheet" href="./css/game.css">
 </head>
 
 <body class="farm-background">
-  <h1>Please login or sign up to continue:</h1>
-  <form id="signin-id" name="signin" method="post" action="signin">
-    <label for="email">Email Address</label>
-    <input class="text" name="email" type="text" />
-    <label for="password">Password</label>
-    <input name="password" type="password" />
-    <input class="btn" type="submit" value="Sign In" />
 
-    <a href="/signin">
-      <input class="btn" type="submit" value="Sign Up" />
-    </a>
-    
-  </form>
+  <div class="text-center" id="sign-up-container">
+   <div>
+    <h1 id="please">Login or sign up to continue:</h1>
 
+    <!-- email input box with beginning of form for post method with signin route-->
+    <form id="signin-id" name="signin" method="post" action="signin">
+      <div class="col-12">
+        <label for="email">Email Address</label>
+        <input class="text" name="email" type="text" />
+      </div>
+
+      <!-- password input box -->
+      <div class="col-12">
+        <label for="password">Password</label>
+        <input name="password" id="inputdefault" type="password" />
+      </div>
+
+      <!-- submit button  -->
+      <div class="col-12"></div>
+      <input class="btn" id="sign-in-btn" type="submit" value="Sign In" />
+    </div>
+    </form>
+
+    <!-- new form post route for register/sign up button  -->
+    <div class="col-12">
+    <form id="signup" name="signup" method="post" action="/signup">
+      <input class="btn" id="sign-up-btn" type="submit" value="Sign Up" />
+    </div>
+    </form>
+  </div>
+</div>
 </body>
 
 </html>
