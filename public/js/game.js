@@ -14,8 +14,8 @@ levels = [{
         text: "FIND THE CHICKEN",
         audio: ""
     }, {
-        name: "pig",
-        text: "FIND THE pig",
+        name: "goat",
+        text: "FIND THE GOAT",
         audio: ""
     }],
     choices: [{
@@ -32,8 +32,8 @@ levels = [{
         image: "./images/chicken.png",
         sound: "",
     }, {
-        name: "pig",
-        image: "./images/pig.png",
+        name: "goat",
+        image: "./images/goat.png",
         sound: "",
     }]
 }, {
