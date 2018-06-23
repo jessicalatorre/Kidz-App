@@ -2,9 +2,12 @@
 //how to store and retreive logged in user information?
 
 $(document).ready(function () {
-	var userID = 1;
+	// var userID = 1; 
+	//commented out this var userID and removed the + user from line 7 to ensure we get all session data
+	//NOTE: passport decorates the request object with the user ID!!!
+	//Just like rec body now have rec user.
 	$.ajax({
-		url: "/api/sessions" + userID,
+		url: "/api/sessions",  
 		method: "GET",
 		success: function (data) {
 			//use a comma below. Can't concatenate an object to a string
@@ -75,9 +78,9 @@ $(document).ready(function () {
 			datasets: [
 				{
 					label: '# clicks',
-					backgroundColor: 'rgba(200, 200, 200, 0.75)',
-					borderColor: 'rgba(200, 200, 200, 0.75)',
-					hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
+					backgroundColor: ['rgba(255, 128, 0, 1)', 'rgba(255, 0, 0, 1)','rgba(0, 0, 255, 1)', 'rgba(128, 0, 255, 1)'],
+					borderColor: ['rgba(255, 128, 0, 1)', 'rgba(255, 0, 0, 1)','rgba(0, 0, 255, 1)', 'rgba(128, 0, 255, 1)'],
+					hoverBackgroundColor: ['rgba(255, 128, 0, 1)', 'rgba(255, 0, 0, 1)','rgba(0, 0, 255, 1)', 'rgba(128, 0, 255, 1)'],
 					hoverBorderColor: 'rgba(200, 200, 200, 1)',
 					data: clicks
 				}
