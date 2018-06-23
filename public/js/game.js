@@ -175,7 +175,7 @@ var checkClick = (selectedObject, correctAnswer) => {
         goodJob.play();
         var correctAnswer = givePrompt(selectedLevel);
         var data = {
-            userID: 1,
+            // userID: 1,
             objectName: selectedObject,
             isCorrect: 1
         }
@@ -189,7 +189,7 @@ var checkClick = (selectedObject, correctAnswer) => {
 
     } else {
         var data = {
-            userID: 1,
+            // userID: 1,
             objectName: selectedObject,
             isCorrect: 0
         }
