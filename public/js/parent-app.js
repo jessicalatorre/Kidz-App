@@ -78,9 +78,12 @@ $(document).ready(function () {
 			datasets: [
 				{
 					label: '# clicks',
-					backgroundColor: ['rgba(255, 128, 0, 1)', 'rgba(255, 0, 0, 1)','rgba(0, 0, 255, 1)', 'rgba(128, 0, 255, 1)'],
-					borderColor: ['rgba(255, 128, 0, 1)', 'rgba(255, 0, 0, 1)','rgba(0, 0, 255, 1)', 'rgba(128, 0, 255, 1)'],
-					hoverBackgroundColor: ['rgba(255, 128, 0, 1)', 'rgba(255, 0, 0, 1)','rgba(0, 0, 255, 1)', 'rgba(128, 0, 255, 1)'],
+					backgroundColor: ['rgba(255, 128, 0, 1)', 'rgba(0, 255, 64, 1)','rgba(255, 191, 0, 1)', 'rgba(128, 0, 255, 1)','rgba(255, 255, 0, 1)','rgba(255, 0, 0, 1)','rgba(0, 0, 255, 1)','rgba(255, 0, 255,1)','rgba(0, 191, 255,1)'
+				],
+					borderColor: ['rgba(255, 128, 0, 1)', 'rgba(0, 255, 64, 1)','rgba(255, 191, 0, 1)', 'rgba(128, 0, 255, 1)','rgba(255, 255, 0, 1)','rgba(255, 0, 0, 1)','rgba(0, 0, 255, 1)','rgba(255, 0, 255,1), rgba(0, 191, 255,1)'
+				],
+					hoverBackgroundColor: ['rgba(255, 128, 0, 1)', 'rgba(0, 255, 64, 1)','rgba(255, 191, 0, 1)', 'rgba(128, 0, 255, 1)','rgba(255, 255, 0, 1)','rgba(255, 0, 0, 1)','rgba(0, 0, 255, 1)','rgba(255, 0, 255,1)','rgba(0, 191, 255,1)'
+				],
 					hoverBorderColor: 'rgba(200, 200, 200, 1)',
 					data: clicks
 				}
