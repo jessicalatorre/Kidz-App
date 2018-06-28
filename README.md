@@ -1,7 +1,7 @@
 # KidzApp
 And education Game for your toddler that simple to use!
 
-# A Collaboration Between;
+# A Collaboration Between:
 - Jessica La Torre
 - Damian Ramirez
 - Mayra Gamiddo
